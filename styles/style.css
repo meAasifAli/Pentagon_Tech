@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #008CBA;
+    --tertiary-color: #f44336;
+    --quaternary-color: #e7e7e7;
+    --font-family: 'Roboto', sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a,
+li {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+header {
+    position: absolute;
+    top: 20;
+    z-index: 200;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 200px;
+    width: 300px;
+    object-fit: contain;
+    margin-left: 5rem;
+
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav ul li {
+    font-family: "Roboto";
+    color: var(--quaternary-color);
+    font-size: 1.05rem;
+    text-transform: capitalize;
+}
+
+header nav ul li:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+header button {
+    margin-right: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2rem;
+    font-family: "Roboto";
+}
+
+header button:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    transform: scaleY(0.90);
+}
+
+/* hero css */
+
+
+
+
+
+#hero {
+    background-image: url("../assets/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: -10;
+    overflow-y: hidden;
+}
+
+#hero .frame1 {
+    background-image: url("../assets/bgFrame1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-position: right;
+    position: absolute;
+    top: 0;
+}
+
+#hero .frame2 {
+    background-image: url("../assets/bgFrame2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    background-position: left;
+    bottom: 0;
+}
+
+#hero .hero-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#hero .hero-wrapper .left {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+#hero .hero-wrapper .left img {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    top: 37%;
+    right: 30%
+}
+
+#hero .hero-wrapper .left h1 {
+    font-family: "Roboto";
+    color: #fff;
+    font-size: 4.8rem;
+    text-align: start;
+}
+
+#hero .hero-wrapper .right {
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+}
+
+
+@media (max-width: 1000px) {
+    #hero {
+        background-image: url("../assets/bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    #hero {
+        background-image: url("../assets/bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+    }
+}
